@@ -10,6 +10,6 @@ public class Pasien {
     }
 
     void tampilInformasi (){
-        System.out.printf("%-10s %-10s %-15s\n", nama, nik, keluhan);
+        System.out.println(nama + " - " + nik + " - " + keluhan);
     }
 }
