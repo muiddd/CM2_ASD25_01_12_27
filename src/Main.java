@@ -5,17 +5,17 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         DLLKlinik antrian = new DLLKlinik();
         DLLKlinik riwayat;
-        
+
         Dokter[] dokters = {
-            new Dokter("dr01", "Wike Ratanca"),
-            new Dokter("dr02", "Santi Runica"),
-            new Dokter("dr03", "Aam Antanica"),
-            new Dokter("dr04", "Slamet Sugito")
+                new Dokter("dr01", "Wike Ratanca"),
+                new Dokter("dr02", "Santi Runica"),
+                new Dokter("dr03", "Aam Antanica"),
+                new Dokter("dr04", "Slamet Sugito")
         };
 
         int pilih;
         do {
-            System.out.println("Sistem Antrian Klinik");
+            System.out.println("\nSistem Antrian Klinik");
             System.out.println("1. Tambah Pasien ke Antrian");
             System.out.println("2. Lihat Antrian");
             System.out.println("3. Layani Pasien");
@@ -30,7 +30,6 @@ public class Main {
                 case 1:
                     Pasien pasien = inputPasien(sc);
                     antrian.addLast(pasien);
-
                     break;
                 case 2:
 
@@ -40,9 +39,12 @@ public class Main {
                 case 4:
                     break;
                 case 5:
+                    
                     break;
                 case 6:
-                    System.out.println("Terimakasih");
+                    break;
+                case 0:
+                    System.out.println("Terima kasih");
                     break;
                 default:
                     System.out.println("Pilihan tidak valid");
@@ -51,13 +53,14 @@ public class Main {
         } while (pilih != 0);
 
     }
-    public static Pasien inputPasien(Scanner sc){
-        System.out.println("input nama pasien: ");
-            String nama = sc.nextLine();
-            System.out.println("NIK: ");
-            String nik = sc.nextLine();
-            System.out.println("keluhan: ");
-            String keluhan = sc.nextLine();
-            return new Pasien(nama, nik, keluhan);
+
+    public static Pasien inputPasien(Scanner sc) {
+        System.out.print("Input Nama Pasien : ");
+        String nama = sc.nextLine();
+        System.out.print("NIK : ");
+        String nik = sc.nextLine();
+        System.out.print("Keluhan : ");
+        String keluhan = sc.nextLine();
+        return new Pasien(nama, nik, keluhan);
     }
 }
