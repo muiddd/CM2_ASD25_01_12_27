@@ -28,6 +28,7 @@ public class DLLKlinik {
             tmp.next = newNode;
             size++;
         }
+        System.out.println(">>Pasien Masuk kedalan Antrian");
     }
 
     public void removeFirst(Pasien data) {
