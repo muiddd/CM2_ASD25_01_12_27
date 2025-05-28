@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        DLLKlinik antrian;
+        DLLKlinik antrian = new DLLKlinik();
         DLLKlinik riwayat;
         
         Dokter[] dokters = {
@@ -28,6 +28,8 @@ public class Main {
             sc.nextLine();
             switch (pilih) {
                 case 1:
+                    Pasien pasien = inputPasien(sc);
+                    antrian.addLast(pasien);
 
                     break;
                 case 2:
@@ -47,5 +49,15 @@ public class Main {
                     break;
             }
         } while (pilih != 0);
+
+    }
+    public static Pasien inputPasien(Scanner sc){
+        System.out.println("input nama pasien: ");
+            String nama = sc.nextLine();
+            System.out.println("NIK: ");
+            String nik = sc.nextLine();
+            System.out.println("keluhan: ");
+            String keluhan = sc.nextLine();
+            return new Pasien(nama, nik, keluhan);
     }
 }
