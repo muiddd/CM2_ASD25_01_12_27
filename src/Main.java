@@ -3,6 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        DLLKlinik antrian;
+        DLLKlinik riwayat;
+        
+        Dokter[] dokters = {
+            new Dokter("dr01", "Wike Ratanca"),
+            new Dokter("dr02", "Santi Runica"),
+            new Dokter("dr03", "Aam Antanica"),
+            new Dokter("dr04", "Slamet Sugito")
+        };
 
         int pilih;
         do {
@@ -19,8 +28,10 @@ public class Main {
             sc.nextLine();
             switch (pilih) {
                 case 1:
+
                     break;
                 case 2:
+
                     break;
                 case 3:
                     break;
