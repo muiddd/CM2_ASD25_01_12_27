@@ -5,12 +5,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         DLLKlinik antrian = new DLLKlinik();
         DLLKlinik riwayat;
-        
+
         Dokter[] dokters = {
-            new Dokter("dr01", "Wike Ratanca"),
-            new Dokter("dr02", "Santi Runica"),
-            new Dokter("dr03", "Aam Antanica"),
-            new Dokter("dr04", "Slamet Sugito")
+                new Dokter("dr01", "Wike Ratanca"),
+                new Dokter("dr02", "Santi Runica"),
+                new Dokter("dr03", "Aam Antanica"),
+                new Dokter("dr04", "Slamet Sugito")
         };
 
         int pilih;
@@ -38,6 +38,8 @@ public class Main {
                 case 3:
                     break;
                 case 4:
+                    System.out.println("Sisa antrian: " + antrian.size );
+
                     break;
                 case 5:
                     break;
@@ -51,13 +53,14 @@ public class Main {
         } while (pilih != 0);
 
     }
-    public static Pasien inputPasien(Scanner sc){
+
+    public static Pasien inputPasien(Scanner sc) {
         System.out.println("input nama pasien: ");
-            String nama = sc.nextLine();
-            System.out.println("NIK: ");
-            String nik = sc.nextLine();
-            System.out.println("keluhan: ");
-            String keluhan = sc.nextLine();
-            return new Pasien(nama, nik, keluhan);
+        String nama = sc.nextLine();
+        System.out.println("NIK: ");
+        String nik = sc.nextLine();
+        System.out.println("keluhan: ");
+        String keluhan = sc.nextLine();
+        return new Pasien(nama, nik, keluhan);
     }
 }
